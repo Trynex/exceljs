@@ -1,5 +1,5 @@
 {
-  "name": "exceljs",
+  "name": "exceljs-fork",
   "version": "0.8.1",
   "description": "Excel Workbook Manager - Read and Write xlsx and csv Files.",
   "private": false,
