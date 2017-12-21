@@ -1,13 +1,13 @@
 {
   "name": "exceljs-fork",
-  "version": "0.8.1",
-  "description": "Excel Workbook Manager - Read and Write xlsx and csv Files.",
+  "version": "0.8.2",
+  "description": "Forked version to fix picture positioning",
   "private": false,
   "license": "MIT",
   "author": "Guyon Roche",
   "repository": {
     "type": "git",
-    "url": "https://github.com/guyonroche/exceljs.git"
+    "url": "https://github.com/Trynex/exceljs.git"
   },
   "engines": {
     "node": ">=4.0.0"
