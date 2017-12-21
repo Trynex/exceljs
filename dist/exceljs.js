@@ -5783,12 +5783,19 @@ utils.inherits(CellPositionXform, BaseXform, {
     xmlStream.openNode(this.tag);
 
     var col = Math.floor(model.col);
-    var colOff = Math.floor((model.col - col) * 640000);
+    var row = Math.floor(model.row);
+    var colOff, rowOff;
+    if (model.collOff === undefined || model.rowOff === undefined) {
+      colOff = Math.floor((model.col - col) * 640000);
+      rowOff = Math.floor((model.row - row) * 180000);
+    } else {
+      colOff = model.collOff;
+      rowOff = model.rowOff;
+    }
+
     this.map['xdr:col'].render(xmlStream, col);
     this.map['xdr:colOff'].render(xmlStream, colOff);
 
-    var row = Math.floor(model.row);
-    var rowOff = Math.floor((model.row - row) * 180000);
     this.map['xdr:row'].render(xmlStream, row);
     this.map['xdr:rowOff'].render(xmlStream, rowOff);
 
